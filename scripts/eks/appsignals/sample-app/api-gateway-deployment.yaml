@@ -26,6 +26,9 @@ spec:
         sidecar.opentelemetry.io/inject-java: "true"
         instrumentation.opentelemetry.io/inject-java: "true"
     spec:
+      nodeSelector:
+        kubernetes.io/os: windows
+        kubernetes.io/arch: amd64
       containers:
         - command:
             - ./dockerize
